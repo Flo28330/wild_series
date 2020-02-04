@@ -1,0 +1,26 @@
+// assets/css/global.scss
+
+// customize some Bootstrap variables
+$primary: darken(#428bca, 20%);
+
+
+// the ~ allows you to reference things in node_modules
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  background-color: slategray;
+
+  h1, h2, h3, h4, h5, h6, p, a, .btn-outline-success {
+    color: bisque;
+    font-family: "DejaVu Serif", sans-serif;
+    border-color: bisque;
+  }
+  a:hover{
+    color: darkorange;
+  }
+  .btn:hover {
+    color: slategray;
+    background-color: bisque;
+    border: bisque;
+  }
+}
