@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ category.name }}{% endblock %}
+
+{% block body %}
+
+    <h1 class="text-center mt-5">Category : {{ category.name }}</h1>
+    <h3 class="text-center m-3">3 programs by category</h3>
+
+    <div class="container-fluid">
+        <div class="row">
+                {% for program in programs %}
+                    <div class="media">
+                        <img class="align-self-start m-5" src="{{ program.poster }}" alt="{{ program.title }} poster">
+                        <div class="media-body pb-4">
+                            <h1 class="m-5">{{ program.id }} - {{ program.title  }}</h1>
+                            <p>{{ program.summary }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <a href="{{ path('wild_index') }}">
+        Back to home page
+    </a>
+{% endblock %}
